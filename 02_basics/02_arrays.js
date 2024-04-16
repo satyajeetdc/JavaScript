@@ -21,6 +21,7 @@ console.log(realArr1);  // [ 1, 2, 3, 4, 5, 6, 7, 6, 7,  4, 5 ]
 console.log(Array.isArray("Satyajeet")); // false
 console.log(Array.from("Satyajeet")); // ['S', 'a', 't', 'y', 'a', 'j', 'e', 'e', 't' ]
 console.log(Array.from({ name: "Satyajeet" })); // [] -> INTERESTING
+console.log(Array.from([1, 2, 3], (x) => x + x)); // [ 2, 4, 6 ]
 
 let score1 = 100;
 let score2 = 200;

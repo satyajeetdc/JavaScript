@@ -1,6 +1,7 @@
 // TYPES ---->>> STACK  &  HEAP
 
 // STACK ---->>>> Primitive data types - copy of original - original value not changed
+
 // HEAP  ---->>>> Non Primitive data types - reference of original- original value changes
 
 

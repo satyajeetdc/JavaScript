@@ -6,7 +6,7 @@ console.log(`${name} has ${repoCount} repositories`);  // string interpolation
 
 const newName = new String("satyajeet-das-chowdhury");
 
-console.log(newName[0]);
+console.log(newName[0]); 
 console.log(newName.__proto__);
 
 console.log(newName.length);

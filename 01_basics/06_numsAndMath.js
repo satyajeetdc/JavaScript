@@ -15,4 +15,16 @@
 // const number = 1000000;
 // console.log(number.toLocaleString("en-IN"));
 
+// console.log(Math.abs(-0.12));       // 0.12
+// console.log(Math.round(-0.12));     // -0
+// console.log(Math.ceil(-0.12));      // -0
+// console.log(Math.floor(-0.12));     // -1
+
+// console.log(Math.random());     // 0 to 1
+// console.log(Math.floor(Math.random() * 6) + 1); // 1 to 6
+
+const min = 15;
+const max = 20;
+
+console.log(Math.floor(Math.random() * (max - min + 1)) + min); // GENERIC FORMULA FOR RANDOM NUMBER
 

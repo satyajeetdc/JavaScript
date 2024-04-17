@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Listener</title>
+  </head>
+  <body>
+    <h2>Amazing image</h2>
+    <div style="background-color: #414141; color: aliceblue">
+      <ul id="images">
+        <li>
+          <img
+            width="200px"
+            id="photoshop"
+            src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt="photoshop"
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="japan"
+            src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="river"
+            src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="owl"
+            src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="prayer"
+            src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+        </li>
+        <li>
+          <a style="color: aliceblue" href="https://google.com" id="google"
+            >Google</a
+          >
+        </li>
+      </ul>
+    </div>
+  </body>
+  <script>
+    // attachEvent()
+
+    // type, timestamp, preventDefault,
+    // target, toElement, srcElement, currentTarget
+    // clientX, clientY, screenX, sceenY, all position related
+    // altkey, ctrl key, shiftkey, keyCode
+
+    // document.getElementById("owl").onclick = function() {alert("owl clicked");}
+
+    // document.getElementById("owl").addEventListener(
+    //   "click",
+    //   function () {
+    //     alert("owl clicked");
+    //   },
+    //   false
+    // );
+    // false -> event bubbling -> default -> bottom to top
+    // true -> event capturing -> top to bottom
+
+    // document.getElementById("images").addEventListener(
+    //   "click",
+    //   function (event) {
+    //     console.log("Clicked inside the ul");
+    //   },
+    //   false // event bubbling
+    //   //   true // event capturing
+    // );
+
+    // document.getElementById("owl").addEventListener(
+    //   "click",
+    //   function (event) {
+    //     console.log("owl clicked");
+    //     event.stopPropagation(); // parent needs to be at false(bubbling)
+    //   },
+    //   false
+    // );
+
+    // document.getElementById("google").addEventListener("click", function(event) {
+    //     event.preventDefault();
+    //     event.stopPropagation();
+    //     console.log("Google link was clicked");
+    // });
+
+    document.querySelector("#images").addEventListener(
+      "click",
+      function (event) {
+        if (event.target.tagName === "IMG") {
+          let removeIt = event.target.parentNode;
+          // removeIt.remove();
+          removeIt.parentNode.removeChild(removeIt);
+        }
+      },
+      false
+    );
+  </script>
+</html>

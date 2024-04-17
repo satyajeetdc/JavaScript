@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+  </head>
+  <body></body>
+  <script>
+    let div = document.createElement("div");
+    div.className = "main";
+    div.id = Math.floor(Math.random() * 10) + 1;
+    div.setAttribute("title", "main-div");
+    div.style.backgroundColor = "red";
+    div.style.padding = "10px";
+
+    // div.innerText = "Hello from div";
+    let addText = document.createTextNode("Hello from div");
+
+    div.appendChild(addText);
+    document.body.appendChild(div);
+    console.log(div);
+  </script>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+  </head>
+  <body>
+    <ul class="language">
+      <li>JavaScript</li>
+    </ul>
+  </body>
+  <script>
+    // basic approach
+    function addLanguage(langName) {
+      const newLi = document.createElement("li");
+      newLi.innerHTML = `${langName}`;
+      document.querySelector(".language").appendChild(newLi);
+    }
+    addLanguage("cpp");
+    addLanguage("ts");
+
+    // optimised and recommended approach
+    function addOptiLanguage(langName) {
+      const newLi = document.createElement("li");
+      newLi.appendChild(document.createTextNode(langName));
+      document.querySelector(".language").appendChild(newLi);
+    }
+    addOptiLanguage("java");
+    addOptiLanguage("golang");
+
+    // Editing
+    let secondLang = document.querySelector("li:nth-child(2)");
+    // secondLang.innerHTML = "Mojo" // not recommended
+    let newLi = document.createElement("li");
+    newLi.textContent = "Mojo";
+    secondLang.replaceWith(newLi);
+
+    // Editing
+    const thirdLang = document.querySelector("li:nth-child(3)");
+    thirdLang.outerHTML = "<li> TypeScript </li>";
+
+    // Remove
+    const lastLang = document.querySelector("li:last-child");
+    lastLang.remove();
+  </script>
+</html>

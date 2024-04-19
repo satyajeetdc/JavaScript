@@ -9,7 +9,7 @@
 });
 
 promiseOne.then(function () {
-  console.log("promise consumed");
+  console.log("promise consumed");      
 });
 
 // Second Promise
@@ -95,7 +95,7 @@ async function getAllUsers() {
 getAllUsers();
 
 
-// // Using fetch()
+// Using fetch()
 fetch("https://api.github.com/users/satyajeetdc")
   .then((response) => {
     return response.json();
